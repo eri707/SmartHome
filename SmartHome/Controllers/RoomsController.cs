@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartHome.Controllers
 {
-    [ApiController]
+    [ApiController] //This attribute handles incoming HTTP requests and send response back to the caller
     [Route("api/rooms")]
     public class RoomsController : ControllerBase
     {
@@ -24,7 +24,7 @@ namespace SmartHome.Controllers
         {
             return _roomsRepository.GetAllRooms();
         }
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<Room> GetRoom(Guid id)
         {
             return _roomsRepository.GetRoom(id);
@@ -34,11 +34,12 @@ namespace SmartHome.Controllers
         {
             return _roomsRepository.UpdateRoom(id, model);
         }
-        [HttpDelete("{id}")]
+        [HttpPost]
         public async Task<Room> AddRoom(AddRoomViewModel model)
         {
            return _roomsRepository.AddRoom(model);
         }
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteRoom(Guid id)
         {
             _roomsRepository.DeleteRoom(id);

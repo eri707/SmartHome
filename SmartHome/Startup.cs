@@ -31,7 +31,7 @@ namespace SmartHome
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HomeControllerApi", Version = "v1" });
             });
             services.AddScoped<IRoomsRepository, RoomsRepository>();
-            //services.AddScoped<IDevicesRepository, DevicesRepository>();
+            services.AddScoped<IDevicesRepository, DevicesRepository>();
             services.AddRazorPages();
         }
 
@@ -47,7 +47,7 @@ namespace SmartHome
             //else
             //{
                 //app.UseExceptionHandler("/Error");
-                //// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
             //}
 
