@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SmartHome.Model
 {
-    public enum Type
+    public enum DeviceType
     {
         Light,
         Outlet,

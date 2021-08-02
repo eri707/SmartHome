@@ -12,6 +12,6 @@ namespace SmartHome.Model
         public string Name { get; set; }
         public Guid? RoomId { get; set; }
         public string Status { get; set; }
-        public Type? Type { get; set; } //from enum 
+        public DeviceType? DeviceType { get; set; } //from enum 
     }
 }

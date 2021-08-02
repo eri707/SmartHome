@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartHome.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace SmartHome.ViewModels
         public Guid? RoomId { get; set; }
         [MaxLength(1000)]
         public string Status { get; set; }
-        public Type? Type { get; set; } //from enum 
+        public DeviceType? DeviceType { get; set; } //from enum 
     }
 }

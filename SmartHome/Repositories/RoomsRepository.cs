@@ -55,7 +55,7 @@ namespace SmartHome.Repositories
         {
             using (var db = new SqlConnection(_connString))
             {
-                var rooms = db.Query<Room>($"SELECT * FROM ROOMS");
+                var rooms = db.Query<Room>($"SELECT * FROM Rooms");
                 return rooms;
             }
         }
