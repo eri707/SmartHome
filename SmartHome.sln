@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome", "SmartHome\SmartHome.csproj", "{DC262468-51B2-4AAE-9F46-4BBAF6407649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome", "SmartHome\SmartHome.csproj", "{DC262468-51B2-4AAE-9F46-4BBAF6407649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Test", "SmartHome.Test\SmartHome.Test.csproj", "{A70A9CF1-787A-4587-94FA-16E24E4F76E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DC262468-51B2-4AAE-9F46-4BBAF6407649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC262468-51B2-4AAE-9F46-4BBAF6407649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC262468-51B2-4AAE-9F46-4BBAF6407649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70A9CF1-787A-4587-94FA-16E24E4F76E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70A9CF1-787A-4587-94FA-16E24E4F76E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70A9CF1-787A-4587-94FA-16E24E4F76E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70A9CF1-787A-4587-94FA-16E24E4F76E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
