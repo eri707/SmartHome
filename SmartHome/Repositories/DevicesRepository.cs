@@ -14,7 +14,7 @@ namespace SmartHome.Repositories
     {
         Device AddDevice(AddDeviceViewModel model);
         Device GetDevice(Guid id);
-        IEnumerable<Device> GetAllDevices(Guid roomId);
+        IEnumerable<Device> GetAllDevices(Guid? roomId);
         Device UpdateDevice(UpdateDeviceViewModel model, Guid id);
         void DeleteDevice(Guid id);
 
@@ -51,11 +51,13 @@ namespace SmartHome.Repositories
             }
         }
 
-        public IEnumerable<Device> GetAllDevices(Guid roomId)
+        public IEnumerable<Device> GetAllDevices(Guid? roomId) // this method has two meanings. One is to get all devices and the other one is to get all devices only from the roomId
         {
             using (var db = new SqlConnection(_connString))
             {
-                var devices = db.Query<Device>($"SELECT * FROM Devices WHERE RoomId = '{ roomId }'");
+                var query = $"SELECT * FROM Devices"; // get all devices
+                if (roomId.HasValue) query += $" WHERE RoomId = '{ roomId }'"; // get all devices only from the roomId
+                var devices = db.Query<Device>(query);
                 return devices;
             }
         }

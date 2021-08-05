@@ -27,8 +27,8 @@ namespace SmartHome.Controllers
         {
             return _devicesRepository.GetDevice(id);
         }
-        [HttpGet("room/{roomId}")]
-        public async Task<IEnumerable<Device>> GetAllDevices(Guid roomId)
+        [HttpGet]// this method has two meanings. One is to get all devices and the other one is to get all devices from the roomId
+        public async Task<IEnumerable<Device>> GetAllDevices([FromQuery]Guid? roomId) // add optional query parameter
         {
             return _devicesRepository.GetAllDevices(roomId);
         }
